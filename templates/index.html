@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styles.css">
+    <title>Boston House Price Prediction</title>
+</head>
+<body>
+    <div class="flex max-view centered">
+        <div class="flex center-items column">
+            <h2 class="white">Boston House Price Prediction with Machine Learning</h2>
+            <form class="flex center-items column" action="/predict" method="post">
+
+                <label class="white" for="CRIM">CRIM</label><br>
+                <input name='CRIM' type="text"><br>
+
+                <label class="white" for="ZN">ZN</label><br>
+                <input name='ZN' type="text"><br>
+
+                <label class="white" for="INDUS">INDUS</label><br>
+                <input name='INDUS' type="text"><br>
+
+                <label class="white" for="CHAS">CHAS</label><br>
+                <input name='CHAS' type="text"><br>
+
+                <label class="white" for="NOX">NOX</label><br>
+                <input name='NOX' type="text"><br>
+
+                <label class="white" for="RM">RM</label><br>
+                <input name='RM' type="text"><br>
+
+                <label class="white" for="AGE">AGE</label><br>
+                <input name='AGE' type="text"><br>
+
+                <label class="white" for="DIS">DIS</label><br>
+                <input name='DIS' type="text"><br>
+
+                <label class="white" for="RAD">RAD</label><br>
+                <input name='RAD' type="text"><br>
+
+                <label class="white" for="TAX">TAX</label><br>
+                <input name='TAX' type="text"><br>
+
+                <label class="white" for="PTRATIO">PTRATIO</label><br>
+                <input name='PTRATIO' type="text"><br>
+
+                <label class="white" for="B">B</label><br>
+                <input name='B' type="text"><br>
+
+                <label class="white" for="LSTAT">LSTAT</label><br>
+                <input name='LSTAT' type="text"><br>
+
+                <input class="white button" type="submit" value="Get Prediction">
+            </form>
+            {% if prediction %}
+                <h3 class="white">{{ prediction }}</h3>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
