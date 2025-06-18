@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+import os
 import numpy as np
 import pickle
 
@@ -34,7 +35,7 @@ def predict():
 
     return render_template('index.html', prediction=f'The predicted price is {output}')
 
-if __name__ == '__main__':
-    app.run(debug=True)
+  if __name__ == '__main__':
+        app.run(host='0.0.0.0', port=os.environ.get('PORT', 5000))
 
 
