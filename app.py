@@ -36,6 +36,6 @@ def predict():
     return render_template('index.html', prediction=f'The predicted price is {output}')
 
   if __name__ == '__main__':
-        app.run(host='0.0.0.0', port=os.environ.get('PORT', 5000))
+      app.run(host='0.0.0.0', port=os.environ.get('PORT', 5000))
 
 
